@@ -7,7 +7,7 @@
 
 <style>
 
-  div.ball-one {
+  .ball-one {
     margin-top: 10px;
     height: 100px;
     width: 100px;
@@ -37,33 +37,44 @@
     }
   }
 
-
-
-
-
-
-/*
-  a:.shrink:hover
-{
-        -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
-        transform: scale(0.8);
+.ball-two {
+  margin-top: 10px;
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  border-radius: 50%;
+  animation: shrink 5s infinite;
+  float: right;
 }
-*/
+
+@keyframes shrink {
+  0% {
+    border radius: 100px;
+    color: blue;
+  }
+
+  50% {
+    height: 50px;
+    width: 50px;
+    color: red;
+    transition: 2s;
+  }
+
+  100% {
+    margin-right: 50px; 
+  }
+}
+
 
 
 </style>
-
-
 
 </head>
 
 <body>
 
-<div class="ball-one"></div>
-
-
-
+  <div class="ball-one"></div>
+  <div class="ball-two"></div>
 
 </body>
 </html>
