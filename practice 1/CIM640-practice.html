@@ -1,53 +1,64 @@
 <!DOCTYPE HTML>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Practice 1</title>
-    <style>
+<meta charset="utf-8">
+<title>Practice 1</title>
 
-      div.main-container {
-        height: 2000px;
-        width: 1000px;
+<head>
+  <style>
+
+      body {
+        font-family: sans-serif;
+        position: inline-block;
+        text-align: center;
       }
 
-      div.inside-box {
-        border: solid black 1px;
-        margin: 10px;
+      .bpm {
+        margin: auto;
         height: 510px;
         width: 500px;
-        position: relative;
         background-color: #fff;
-        animation-name: example;
-        animation-duration: 4s;
+        border-radius: 50%;
+        animation: beats-per-minute 1s infinite;
       }
 
-      div.box-one {
-        border: solid black 1px;
-        animation: pulse .8s infinite;
-        font-family:sans-serif;
-        margin: 5px;
-      }
-
-      @keyframes pulse {
+      @keyframes beats-per-minute {
         0% {
           background-color: #f00;
-          height: 500px;
+
+        50% {
+          opacity: 25%;
         }
+
+        100% {
+          opacity:50%;
+        }
+        }
+
+
+      .peak-heart-rate {
+          height: 500px;
+          width: 500px;
+          margin:auto;
+          border: solid black 1px;
+          border-radius: 50%;
+          background-color: red;
+          animation: bouncy 5s infinite;
+          float: right;
+        }
+
+
+
 
   </style>
 </head>
+
 <body>
-
-  <div class="main-container">
-    <div class="inside-box">
-    <div class="box-one">resting heart rate=75bpm</div>
-    </div>
-<div class="inside-container-one">
+  <p>Beats Per Minute=75</p>
+  <div class="bpm"></div>
+  <div class="container-two"></div>
+  <div class="peak-heart-rate"></div>
 
 
-
-  </div>
 
 </body>
-
 </html>
