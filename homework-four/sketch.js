@@ -5,6 +5,11 @@ var boundary3 = 0;
 var topBoundary = 0;
 var bottomBoundary = 0; 
 
+var brushColor = "black";
+
+var currentArea = "";
+
+
 var buttonSize = 100; 
 
 function setup() {
@@ -27,4 +32,9 @@ function draw() {
   rect (boundary2, topBoundary, buttonSize, buttonSize);
   fill ("yellow");
   rect (boundary3, topBoundary, buttonSize, buttonSize);
+  
+  fill(brushColor);
+  ellipse(mouseX, mouseY, 10, 10);
+  console.log(currentArea);
+  
 }
