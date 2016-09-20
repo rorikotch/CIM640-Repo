@@ -62,10 +62,10 @@ function draw() {
       console.log("area3");
       currentArea = "area3";
     } else if (mouseX > boundary4 && mouseX < boundary5) {
-      console.log("area3");
+      console.log("area4");
       currentArea = "area4";
     } else if (mouseX > boundary5 && mouseX < boundary6) {
-      console.log("area3");
+      console.log("area5");
       currentArea = "area5";
     }
   }
