@@ -20,6 +20,10 @@ function draw() {
   randomPositionX = random(width);
   randomPositionY = random(height);
   ellipse(randomPositionX, randomPositionY, 200, 200);
+  ellipse(randomPositionX, randomPositionY, 150, 150);
+  ellipse(randomPositionX, randomPositionY, 100, 100);
+  ellipse(randomPositionX, randomPositionY, 50, 50);
+
   frameRate(4);
   
   fill(brushColor);
