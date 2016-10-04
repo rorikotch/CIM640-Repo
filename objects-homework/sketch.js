@@ -20,8 +20,6 @@ function setup() {
   bubble7 = new bubbles(random(width), random(height), 30)
   bubble8 = new bubbles(random(width), random(height), 15)
   bubble9 = new bubbles(random(width), random(height), 60)
-
-
   noStroke();
 }
 
