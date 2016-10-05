@@ -45,11 +45,10 @@ function mousePressed(){
    if(mouseIsPressed == true){
     currentColor = random(colorArray);
     console.log(currentColor);
-}
+  }
 }
 
 function bubbles(tempX, tempY, tempDiameter) {
-
   this.x = tempX;
   this.y = tempY;
   this.diameter = tempDiameter;
@@ -58,5 +57,4 @@ function bubbles(tempX, tempY, tempDiameter) {
     fill(currentColor);
     ellipse(this.x, this.y, this.diameter, this.diameter);
   }
-
 }
