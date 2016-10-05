@@ -45,9 +45,7 @@ function draw() {
 function mousePressed(){
    if(mouseIsPressed == true){
     console.log("Pressed");
-  }else if (mouseIsPressed == false){
-    fill(255);
-  }
+}
 }
 
 function bubbles(tempX, tempY, tempDiameter) {
