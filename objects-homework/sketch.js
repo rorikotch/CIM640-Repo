@@ -3,6 +3,11 @@ var bubble1;
 var bubble2;
 var bubble3;
 var bubble4;
+var bubble5; 
+var bubble6; 
+var bubble7; 
+var bubble8;
+var bubble9; 
 var randomColor;
 
 function setup() {
@@ -35,7 +40,6 @@ function draw() {
   bubble7.display();
   bubble8.display();
   bubble9.display();
-
 }
 
 function bubbles(tempX, tempY, tempDiameter) {
@@ -48,9 +52,10 @@ function bubbles(tempX, tempY, tempDiameter) {
     fill(r, g, b, 130);
     ellipse(this.x, this.y, this.diameter, this.diameter);
   }
-
-  function shake() {
-    
-  }
+  
+function mousePressed(){
+  if (mousePressed === true)
+  console.log("yes");
+}
 
 }
