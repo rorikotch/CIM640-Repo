@@ -9,12 +9,11 @@ var bubble7;
 var bubble8;
 var bubble9; 
 var randomColor;
+var colorArray = ["black","green", "orange", "pink", "blue", "purple", "yellow", "red", "green", "black", "gray"];
+var currentColor ="black"
 
 function setup() {
   createCanvas(400, 400);
-  r = random(255);
-  g = random(255);
-  b = random(255);
   bubble0 = new bubbles(random(width), random(height), 50)
   bubble1 = new bubbles(random(width), random(height), 100)
   bubble2 = new bubbles(random(width), random(height), 120)
@@ -44,7 +43,8 @@ function draw() {
 
 function mousePressed(){
    if(mouseIsPressed == true){
-    console.log("Pressed");
+    currentColor = random(colorArray);
+    console.log(currentColor);
 }
 }
 
@@ -55,11 +55,8 @@ function bubbles(tempX, tempY, tempDiameter) {
   this.diameter = tempDiameter;
 
   this.display = function() {
-    fill(r, g, b, 130);
+    fill(currentColor);
     ellipse(this.x, this.y, this.diameter, this.diameter);
   }
-
-
-  
 
 }
