@@ -1,4 +1,6 @@
-
+var prevMillis = 0;
+var interval = 5000;
+var counter = 0;
 
 function setup() {
   createCanvas (2000,2000);
@@ -23,5 +25,14 @@ function draw() {
   //mouth 
   fill(0);
   ellipse(955, 470, 30, 20);
+  
+  //make a button to reset and the reset would be to set the previous millis equal to millis, so setting the time to start from right now. 
+  if (millis() - prevMillis >= interval){
+    counter++;
+    console.log(counter);
+    prevMillis = millis();
+  } 
 }
+
+
 
