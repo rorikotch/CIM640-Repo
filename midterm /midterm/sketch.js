@@ -58,11 +58,20 @@ function draw() {
   //mouth 
   fill(255);
   ellipse(955, 470, 30, 20);
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> origin/master
     if (counter >= reset){
       console.log("reset")
       counter = 0;
     }
+<<<<<<< HEAD
+=======
+    
+  } 
+>>>>>>> origin/master
 
 }
 
