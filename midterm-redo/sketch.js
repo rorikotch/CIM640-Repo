@@ -68,8 +68,6 @@ function draw() {
 
 }
 
-    
-  } 
   
   
 
