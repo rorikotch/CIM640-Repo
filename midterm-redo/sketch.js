@@ -8,7 +8,7 @@ var word = random(words);
 
 function setup() {
   createCanvas (2000,2000);
-
+  frameRate(1);
 }
 
 function draw() {
@@ -71,9 +71,7 @@ function draw() {
   textStyle(BOLD);
   textSize(13);
   strokeWeight(0);
-  frameRate(.5);
-
-
+  text(frameCount, width/2, height/2);
 }
 
   
