@@ -10,11 +10,8 @@ function setup() {
   randomSaying.push("EYE SEE YOU'RE UP TO SOMETHING IMPORTANT, BUT LOOK AWAY FROM THE SCREEN FOR 20 SECONDS");
   randomSaying.push("PUSH YOUR GLASSES UP, TAKE A 20 SECOND BREAK, THEN GET BACK TO WORK");
   randomSaying.push("TAKE YOUR VISION TO THE NEXT LEVEL");
-  randomSaying.push("DON'T LASH OUT AT ME, BUT LOOK AWAY, OKAY?");
+  randomSaying.push("DON'T LASH OUT AT ME, BUT LOOK AWAY FROM THE SCREEN FOR A MINUTE, OKAY?");
   randomSaying.push("IF YOU'RE RUNNING OUT OF EYE-DEAS, TAKE A BREAK");
-  
-  for(var i = 0; i < randomSaying.length; i)
-    text(randomSaying[i], random(width), random(height));
 }
 
 function draw() {
