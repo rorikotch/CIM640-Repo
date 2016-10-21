@@ -8,6 +8,8 @@ var word = random(words);
 
 function setup() {
   createCanvas (2000,2000);
+  noStroke();
+
 }
 
 function draw() {
@@ -34,8 +36,7 @@ function draw() {
   ellipse(958, 445, 10, 10);
   //mouth 
   fill(0);
-  ellipse(955, 470, 30, 20);
-  noStroke();
+  ellipse(949, 470, 20, 20);
   
   } else {
     
@@ -70,7 +71,6 @@ function draw() {
   text(random(words), 510, 450);
   textStyle(BOLD);
   textSize(13);
-  strokeWeight(0);
   frameRate(1);
   
 }
