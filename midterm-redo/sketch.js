@@ -38,7 +38,6 @@ function draw() {
   ellipse(955, 470, 30, 20);
   noStroke();
   
-  
   } else {
     
     console.log("counter-white;="+counter);
@@ -68,8 +67,8 @@ function draw() {
   } 
 
   fill(255);
-  text(words, 400, 500); 
-
+  text(words, 200, 350);
+  
 
 }
 
