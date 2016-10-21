@@ -2,9 +2,17 @@ var prevMillis = 0;
 var interval = 100;
 var reset = 200;
 var counter = 0;
+var randomSaying = [];
 
 function setup() {
   createCanvas (2000,2000);
+  
+  randomSaying.push("EYE SEE YOU'RE UP TO SOMETHING IMPORTANT, BUT LOOK AWAY FROM THE SCREEN FOR 20 SECONDS");
+  randomSaying.push("PUSH YOUR GLASSES UP, TAKE A 20 SECOND BREAK, THEN GET BACK TO WORK");
+  randomSaying.push("TAKE YOUR VISION TO THE NEXT LEVEL");
+  randomSaying.push("DON'T LASH OUT AT ME, BUT LOOK AWAY, OKAY?");
+  randomSaying.push("IF YOU'RE RUNNING OUT OF EYE-DEAS, TAKE A BREAK");
+  
 }
 
 function draw() {
@@ -16,7 +24,7 @@ function draw() {
   if (counter <= interval){
     console.log("counter;="+counter);
     
-      fill (0);
+  fill (0);
   rect (500,400,500,100);
   //face circle
   fill(0,55,200);
