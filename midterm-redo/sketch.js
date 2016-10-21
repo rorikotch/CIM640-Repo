@@ -63,9 +63,7 @@ function draw() {
       console.log("reset")
       counter = 0;
     }
-    
   } 
-
 }
 
   
