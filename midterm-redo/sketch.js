@@ -13,14 +13,14 @@ function setup() {
   randomSaying.push("DON'T LASH OUT AT ME, BUT LOOK AWAY, OKAY?");
   randomSaying.push("IF YOU'RE RUNNING OUT OF EYE-DEAS, TAKE A BREAK");
   
+   for(var i = 0; i < randomSaying.length; i)
+    text(randomSaying[i], random(width), random(height));
 }
 
 function draw() {
 
   counter++;
   
-    //make a button to reset and the reset would be to set the previous millis equal to millis, so setting the time to start from right now. 
-
   if (counter <= interval){
     console.log("counter;="+counter);
     
@@ -72,6 +72,9 @@ function draw() {
       counter = 0;
     }
   } 
+
+
+
 }
 
   
