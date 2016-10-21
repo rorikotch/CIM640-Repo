@@ -9,7 +9,6 @@ var word = random(words);
 function setup() {
   createCanvas (2000,2000);
   noStroke();
-
 }
 
 function draw() {
