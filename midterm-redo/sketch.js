@@ -73,8 +73,6 @@ function draw() {
   strokeWeight(0);
   frameRate(1);
   
-  
-  
 }
 
   
