@@ -67,10 +67,11 @@ function draw() {
   } 
   
   fill(255);
-  text(words, 510, 450);
+  text(random(words), 510, 450);
   textStyle(BOLD);
   textSize(13);
   strokeWeight(0);
+  frameRate(.5);
 
 
 }
