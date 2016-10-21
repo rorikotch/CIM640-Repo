@@ -70,6 +70,7 @@ function draw() {
   text(words, 510, 450);
   textStyle(BOLD);
   textSize(13);
+  strokeWeight(0);
 
 
 }
