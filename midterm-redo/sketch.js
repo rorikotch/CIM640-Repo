@@ -2,6 +2,9 @@ var prevMillis = 0;
 var interval = 100;
 var reset = 200;
 var counter = 0;
+var words = ["take a break", "eye know you can do it.", "take your vision to the next level"];
+var word = random(words); 
+
 
 function setup() {
   createCanvas (2000,2000);
@@ -63,14 +66,9 @@ function draw() {
       counter = 0;
     }
   } 
-  
-  fill(255);
-  text("EYE SEE YOU'RE UP TO SOMETHING IMPORTANT, BUT LOOK AWAY FROM THE SCREEN FOR 20 SECONDS", 400, 500);
-  text("PUSH YOUR GLASSES UP, TAKE A 20 SECOND BREAK, THEN GET BACK TO WORK", 400, 500);
-  text("TAKE YOUR VISION TO THE NEXT LEVEL", 400, 500);
-  text("DON'T LASH OUT AT ME, BUT LOOK AWAY FROM THE SCREEN FOR A MINUTE, OKAY?");
-  text("IF YOU'RE RUNNING OUT OF EYE-DEAS, TAKE A BREAK", 400, 500);
 
+  fill(255);
+  text(words, 400, 500); 
 
 
 }
