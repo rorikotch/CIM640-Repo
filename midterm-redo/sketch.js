@@ -2,7 +2,7 @@ var prevMillis = 0;
 var interval = 100;
 var reset = 200;
 var counter = 0;
-var words = ["take a break", "eye know you can do it.", "take your vision to the next level"];
+var words = ["take a break", "eye know you can do it", "take your vision to the next level"];
 var word = random(words); 
 
 
@@ -67,7 +67,7 @@ function draw() {
   } 
 
   fill(255);
-  text(words, 200, 350);
+  text(words, 510, 450);
   
 
 }
