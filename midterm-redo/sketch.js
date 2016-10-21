@@ -65,12 +65,16 @@ function draw() {
     }
   } 
   
+  if (mouseIsPressed)
   fill(255);
   text(random(words), 510, 450);
   textStyle(BOLD);
   textSize(13);
   strokeWeight(0);
   frameRate(1);
+  
+  
+  
 }
 
   
