@@ -70,7 +70,6 @@ function draw() {
   text(random(words), 510, 450);
   textStyle(BOLD);
   textSize(13);
-  frameRate(1);
 
 
 }
