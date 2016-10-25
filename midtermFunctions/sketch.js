@@ -1,0 +1,99 @@
+var prevMillis = 0;
+var interval = 10;
+var reset = 200;
+var counter = 0;
+var words = ["Take a break", "Eye know you can do it", "Take your vision to the next level", "Go get a coffee", "See what your co-workers are doing for a minute"];
+var word;
+//var head = ellipse(950,450,80,80);
+
+var randomMessage;
+
+
+
+function setup() {
+  createCanvas(2000, 2000);
+  noStroke();
+
+  word = random(words);
+}
+
+function draw() {
+  background(255);
+
+  frameRate(1);
+
+  counter++;
+  
+  if (counter == interval){
+   randomMessage = chooseRandomWord();
+  }
+
+  if (counter >= interval && counter <= 20) {
+    console.log("counter;=" + counter);
+    drawMessage(randomMessage);
+  }
+  
+  //finish reset condition, add a button 
+
+
+
+  // } else {
+
+  //   console.log("counter-white;="+counter);
+  //     fill (255);
+  // rect (500,400,500,100);
+  // //face circle
+  // fill(255);
+  // ellipse (950,450,80,80);
+  // //left eye
+  // fill(255);
+  // ellipse(938,445, 20, 20);
+  // //right eye
+  // ellipse(958, 445, 20, 20); 
+  // //left pupil
+  // fill(255);
+  // ellipse(938, 445, 10, 10);
+  // //right pupil
+  // ellipse(958, 445, 10, 10);
+  // //mouth 
+  // fill(255);
+  // ellipse(955, 470, 30, 20);
+
+  //   if (counter >= reset){
+  //     console.log("reset")
+  //     counter = 0;
+  //   }
+  // } 
+
+
+
+}
+
+function drawMessage(currentMessage) {
+  fill(0);
+  rect(500, 400, 500, 100);
+  //face circle
+  fill(0, 55, 200);
+  ellipse(950, 450, 80, 80);
+  //left eye
+  fill(255);
+  ellipse(938, 445, 20, 20);
+  //right eye
+  ellipse(958, 445, 20, 20);
+  //left pupil
+  fill(0);
+  ellipse(938, 445, 10, 10);
+  //right pupil
+  ellipse(958, 445, 10, 10);
+  //mouth 
+  fill(0);
+  ellipse(949, 470, 20, 20);
+  
+  fill(0);
+  text(currentMessage, 10,10);
+}
+
+function chooseRandomWord() {
+  var randomWord = random(words);
+  return randomWord;
+}

@@ -4,7 +4,7 @@ var reset = 200;
 var counter = 0;
 var words = ["Take a break", "Eye know you can do it", "Take your vision to the next level","Go get a coffee", "See what your co-workers are doing for a minute"];
 var word; 
-var head = ellipse(950,450,80,80);
+//var head = ellipse(950,450,80,80);
 
 
 
@@ -16,6 +16,12 @@ function setup() {
 }
 
 function draw() {
+  
+  if(key == 'b'){
+    console.log("hello");
+    fill(255);
+    rect(0,0,width,height);
+  }
 
   counter++;
   
@@ -26,7 +32,7 @@ function draw() {
   rect (500,400,500,100);
   //face circle
   fill(0,55,200);
-  ellipse(head); 
+  ellipse(950,450,80,80);
   //left eye
   fill(255);
   ellipse(938,445, 20, 20);
@@ -74,7 +80,7 @@ function draw() {
   text(random(words), 510, 450);
   textStyle(BOLD);
   textSize(13);
-  frameRate(1);
+ frameRate(1);
   
   if (keyIsPressed === true) {
     fill(0);
