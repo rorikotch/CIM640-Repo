@@ -33,6 +33,8 @@ function draw() {
     drawMessage(randomMessage);
   }
   
+  
+  
   //finish reset condition, add a button 
 
 
@@ -89,8 +91,8 @@ function drawMessage(currentMessage) {
   fill(0);
   ellipse(949, 470, 20, 20);
   
-  fill(0);
-  text(currentMessage, 10,10);
+  fill(255);
+  text(currentMessage, 510,450);
 }
 
 function chooseRandomWord() {
