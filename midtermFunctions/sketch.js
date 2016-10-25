@@ -4,8 +4,6 @@ var reset = 200;
 var counter = 0;
 var words = ["Take a break", "Eye know you can do it", "Take your vision to the next level", "Go get a coffee", "See what your co-workers are doing for a minute"];
 var word;
-//var head = ellipse(950,450,80,80);
-
 var randomMessage;
 
 
