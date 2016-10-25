@@ -74,8 +74,16 @@ function draw() {
   textSize(13);
   frameRate(1);
   
+  function mouseReleased() {
+    if (mouseReleased === true) {
+      console.log("it's working");
+    }
+    else {
+      value === 0;
+    }
+  }
 }
-
+//add another function, a check function, checks curent framerate that will return true or something 
   
   
 
