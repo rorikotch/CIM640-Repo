@@ -2,7 +2,7 @@ var prevMillis = 0;
 var interval = 10;
 var reset = 200;
 var counter = 0;
-var words = ["Take a break", "Eye know you can do it", "Take your vision to the next level", "Go get a coffee", "See what your co-workers are doing for a minute"];
+var words = ["Take a break", "Eye know you can do it", "Take your vision to the next level", "Go get a coffee", "See what your co-workers are doing"];
 var word;
 var randomMessage;
 
@@ -22,14 +22,13 @@ function draw() {
 
   counter++;
   
-  if (counter == interval){
-   randomMessage = chooseRandomWord();
+  if (counter >= interval){
+  randomMessage = chooseRandomWord();
+  console.log("counter;=" + counter);
+  drawMessage(randomMessage);
+  counter = 0;
   }
-
-  if (counter >= interval && counter <= 20) {
-    console.log("counter;=" + counter);
-    drawMessage(randomMessage);
-  }
+    
   
   //finish reset condition, add a button 
 
