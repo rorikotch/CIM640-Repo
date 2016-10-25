@@ -4,6 +4,8 @@ var reset = 200;
 var counter = 0;
 var words = ["Take a break", "Eye know you can do it", "Take your vision to the next level","Go get a coffee", "See what your co-workers are doing for a minute"];
 var word; 
+var head = ellipse (950,450,80,80);
+
 
 
 function setup() {
@@ -24,7 +26,7 @@ function draw() {
   rect (500,400,500,100);
   //face circle
   fill(0,55,200);
-  ellipse (950,450,80,80);
+  ellipse(head); 
   //left eye
   fill(255);
   ellipse(938,445, 20, 20);
@@ -74,16 +76,13 @@ function draw() {
   textSize(13);
   frameRate(1);
   
-  function mouseReleased() {
-    if (mouseReleased === true) {
-      console.log("it's working");
-    }
-    else {
-      value === 0;
-    }
+  if (keyIsPressed === true) {
+    fill(0);
+  } else {
+    fill(255);
   }
+
 }
-//add another function, a check function, checks curent framerate that will return true or something 
   
   
 
