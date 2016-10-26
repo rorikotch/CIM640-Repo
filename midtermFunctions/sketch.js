@@ -11,7 +11,6 @@ var randomMessage;
 function setup() {
   createCanvas(2000, 2000);
   noStroke();
-
   word = random(words);
 }
 
@@ -29,12 +28,19 @@ function draw() {
   }
   
   if (counter == interval){
-  randomMessage = choose(RandomWord);
+  randomMessage = chooseRandomWord();
   }
   
   if (interval >= 30){
     counter = 0; 
   }
+
+ /* function chooseRandomWord() {
+  var randomWord = random(words);
+  return randomWord;
+}
+*/
+  
 
 
 }
@@ -63,7 +69,7 @@ function drawMessage(currentMessage) {
   text(currentMessage, 10,10);
 }
 
-function chooseRandomWord() {
+function chooseRandomWord(){
   var randomWord = random(words);
-  return randomWord;
+  return(randomWo);
 }
