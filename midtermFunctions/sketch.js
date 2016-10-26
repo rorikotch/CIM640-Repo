@@ -6,12 +6,14 @@ var words = ["Take a break", "Eye know you can do it", "Take your vision to the 
 var word;
 var randomMessage;
 
+var topInterval = 30;
+
 
 
 function setup() {
   createCanvas(2000, 2000);
   noStroke();
-  word = random(words);
+  randomMessage = chooseRandomWord();
 }
 
 function draw() {
@@ -20,20 +22,17 @@ function draw() {
   frameRate(1);
 
   counter++;
-  
-  if (counter >= interval && counter <= 20){
   console.log("counter;=" + counter);
+  
+  if (counter >= interval && counter <= topInterval){
   drawMessage(randomMessage);
+  }
+
+  if (counter == topInterval + 1){
+  randomMessage = chooseRandomWord();
+  console.log(randomMessage);
   counter = 0;
   }
-  
-  if (counter == interval){
-  randomMessage = chooseRandomWord();
-  }
-  
-  // if (interval = 40){
-  //   counter = 0; 
-  // }
 
 }
 
@@ -57,11 +56,11 @@ function drawMessage(currentMessage) {
   fill(0);
   ellipse(949, 470, 20, 20);
   
-  fill (255);
-  text(currentMessage, 10,10);
+  fill(255);
+  text(currentMessage, 510,450);
 }
 
 function chooseRandomWord(){
   var randomWord = random(words);
-  return(randomWo);
+  return(randomWord);
 }
