@@ -31,6 +31,10 @@ function draw() {
   if (counter == interval){
   randomMessage = chooseRandomWord();
   }
+  
+  if (interval >= 30){
+    counter = 0; 
+  }
 
     
   
@@ -58,7 +62,7 @@ function drawMessage(currentMessage) {
   fill(0);
   ellipse(949, 470, 20, 20);
   
-  fill (0);
+  fill (255);
   text(currentMessage, 10,10);
 }
 
