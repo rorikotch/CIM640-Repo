@@ -29,16 +29,13 @@ function draw() {
   }
   
   if (counter == interval){
-  randomMessage = chooseRandomWord();
+  randomMessage = choose(RandomWord);
   }
   
   if (interval >= 30){
     counter = 0; 
   }
 
-    
-  
-  //finish reset condition, add a button 
 
 }
 
