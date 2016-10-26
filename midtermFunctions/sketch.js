@@ -31,17 +31,9 @@ function draw() {
   randomMessage = chooseRandomWord();
   }
   
-  if (interval >= 30){
-    counter = 0; 
-  }
-
- /* function chooseRandomWord() {
-  var randomWord = random(words);
-  return randomWord;
-}
-*/
-  
-
+  // if (interval = 40){
+  //   counter = 0; 
+  // }
 
 }
 
