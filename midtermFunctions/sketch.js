@@ -22,12 +22,16 @@ function draw() {
 
   counter++;
   
-  if (counter >= interval){
-  randomMessage = chooseRandomWord();
+  if (counter >= interval && counter <= 20){
   console.log("counter;=" + counter);
   drawMessage(randomMessage);
   counter = 0;
   }
+  
+  if (counter == interval){
+  randomMessage = chooseRandomWord();
+  }
+
     
   
   //finish reset condition, add a button 
@@ -54,8 +58,8 @@ function drawMessage(currentMessage) {
   fill(0);
   ellipse(949, 470, 20, 20);
   
-  fill(255);
-  text(currentMessage, 510,450);
+  fill (0);
+  text(currentMessage, 10,10);
 }
 
 function chooseRandomWord() {
