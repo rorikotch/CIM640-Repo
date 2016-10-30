@@ -15,6 +15,11 @@ function setup() {
   createCanvas(2000, 2000);
   noStroke();
   randomMessage = chooseRandomWord();
+  
+  slider = createSlider(0, 255, 100);
+  slider.position(510,470);
+  slider.style('width', '80px');
+  var val = slider.value();
 }
 
 function draw() {
@@ -35,9 +40,7 @@ function draw() {
   counter = 0;
   }
   
-  slider = createSlider(0, 255, 100);
-  slider.position(510,470);
-  slider.style('width', '80px');
+
 
 }
 
@@ -64,7 +67,7 @@ function drawMessage(currentMessage) {
   fill(255);
   text(currentMessage, 510,450);
   
-  var val = slider.value();
+
 }
 
 
