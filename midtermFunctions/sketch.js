@@ -76,7 +76,7 @@ function drawMessage(currentMessage) {
   ellipse(949, 470, 20, 20);
   
   fill(255);
-  text(currentMessage, 510,450);
+  text(currentMessage, 570,440);
 }
 
 function greet() {
