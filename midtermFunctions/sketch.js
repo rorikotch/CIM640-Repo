@@ -6,6 +6,8 @@ var words = ["Take a break", "Eye know you can do it", "Take your vision to the 
 var word;
 var randomMessage;
 var slider; 
+var startTimer = 0; 
+var input, button, greet; 
 
 var topInterval = 30;
 
@@ -16,10 +18,22 @@ function setup() {
   noStroke();
   randomMessage = chooseRandomWord();
   
-  slider = createSlider(0, 255, 100);
+ /* slider = createSlider(0, 255, 100);
   slider.position(510,470);
   slider.style('width', '80px');
-  var val = slider.value();
+  var val = slider.value(); */
+  
+  input = createInput();
+  input.position(510, 470);
+  
+  button = createButton('submit');
+  button.position(640, 470);
+  button.mousePressed(greet);
+  
+  greeting = createElement('h3', 'enter time interval');
+  greeting.position(510, 430);
+  textAlign(CENTER); 
+  fill(255);
 }
 
 function draw() {
@@ -39,9 +53,6 @@ function draw() {
   console.log(randomMessage);
   counter = 0;
   }
-  
-
-
 }
 
 function drawMessage(currentMessage) {
@@ -66,11 +77,21 @@ function drawMessage(currentMessage) {
   
   fill(255);
   text(currentMessage, 510,450);
-  
-
 }
 
-
+function greet() {
+  var name = input.value();
+  greeting.html('hello '+name+'!');
+  input.value('');
+}
+  for (var i=0; i<200; i++) {
+    push();
+    fill(random(255), 255, 255);
+    translate(random(width), random(height));
+    rotate(random(2*PI));
+    text(name, 0, 0);
+    pop();
+}
 
 function chooseRandomWord(){
   var randomWord = random(words);
