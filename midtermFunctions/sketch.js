@@ -36,7 +36,7 @@ function draw() {
   }
   
   slider = createSlider(0, 255, 100);
-  slider.position(10, 10);
+  slider.position(510,470);
   slider.style('width', '80px');
 
 }
@@ -65,7 +65,6 @@ function drawMessage(currentMessage) {
   text(currentMessage, 510,450);
   
   var val = slider.value();
-  background(val);
 }
 
 
