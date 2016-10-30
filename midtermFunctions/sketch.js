@@ -5,6 +5,7 @@ var counter = 0;
 var words = ["Take a break", "Eye know you can do it", "Take your vision to the next level", "Go get a coffee", "See what your co-workers are doing"];
 var word;
 var randomMessage;
+var slider; 
 
 var topInterval = 30;
 
@@ -33,6 +34,10 @@ function draw() {
   console.log(randomMessage);
   counter = 0;
   }
+  
+  slider = createSlider(0, 255, 100);
+  slider.position(10, 10);
+  slider.style('width', '80px');
 
 }
 
@@ -58,7 +63,12 @@ function drawMessage(currentMessage) {
   
   fill(255);
   text(currentMessage, 510,450);
+  
+  var val = slider.value();
+  background(val);
 }
+
+
 
 function chooseRandomWord(){
   var randomWord = random(words);
