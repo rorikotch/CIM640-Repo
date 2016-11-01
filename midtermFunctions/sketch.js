@@ -40,19 +40,24 @@ function draw() {
   background(255);
 
   frameRate(1);
-
+//if timer = true
+//greeting.hide();
   counter++;
   console.log("counter;=" + counter);
   
-  if (counter >= interval && counter <= topInterval){
+  if (counter >= interval && counter <= interval + 10){
   drawMessage(randomMessage);
   }
 
-  if (counter == topInterval + 1){
+  if (counter == interval + 11){
   randomMessage = chooseRandomWord();
   console.log(randomMessage);
   counter = 0;
+  //set timer = false
   }
+  //else{
+  //greeting.show()  
+  //}
 }
 
 function drawMessage(currentMessage) {
@@ -82,7 +87,9 @@ function drawMessage(currentMessage) {
 function greet() {
   var name = input.value();
   greeting.html('hello '+name+'!');
+  //grab time
   input.value('');
+  //start timer = true;
 }
   for (var i=0; i<200; i++) {
     push();
