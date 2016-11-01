@@ -18,10 +18,6 @@ function setup() {
   noStroke();
   randomMessage = chooseRandomWord();
   
- /* slider = createSlider(0, 255, 100);
-  slider.position(510,470);
-  slider.style('width', '80px');
-  var val = slider.value(); */
   
   input = createInput();
   input.position(510, 470);
