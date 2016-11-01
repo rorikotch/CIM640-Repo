@@ -8,6 +8,7 @@ var randomMessage;
 var slider; 
 var startTimer = 0; 
 var input, button, greet; 
+var timer= 0; 
 
 var topInterval = 30;
 
@@ -36,8 +37,9 @@ function draw() {
   background(255);
 
   frameRate(1);
-//if timer = true
-//greeting.hide();
+  
+  if(timer = true && time r= set){
+  greeting.hide();
   counter++;
   console.log("counter;=" + counter);
   
@@ -49,6 +51,7 @@ function draw() {
   randomMessage = chooseRandomWord();
   console.log(randomMessage);
   counter = 0;
+  }
   //set timer = false
   }
   //else{
@@ -82,7 +85,7 @@ function drawMessage(currentMessage) {
 
 function greet() {
   var name = input.value();
-  greeting.html('hello '+name+'!');
+  greeting.html('timer set '+ timer+'!');
   //grab time
   input.value('');
   //start timer = true;
