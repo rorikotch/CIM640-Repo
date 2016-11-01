@@ -8,7 +8,7 @@ var randomMessage;
 var slider; 
 var startTimer = 0; 
 var input, button, greet; 
-var timer= 0; 
+var timer= 5000; 
 
 var topInterval = 30;
 
@@ -27,7 +27,7 @@ function setup() {
   button.position(640, 470);
   button.mousePressed(greet);
   
-  greeting = createElement('h3', 'enter time interval');
+  greeting = createElement('h4', 'enter time interval');
   greeting.position(510, 430);
   textAlign(CENTER); 
   fill(255);
@@ -38,10 +38,11 @@ function draw() {
 
   frameRate(1);
   
-  if(timer = true && time r= set){
+  if(timer === true){
   greeting.hide();
   counter++;
   console.log("counter;=" + counter);
+  }
   
   if (counter >= interval && counter <= interval + 10){
   drawMessage(randomMessage);
@@ -52,12 +53,14 @@ function draw() {
   console.log(randomMessage);
   counter = 0;
   }
-  //set timer = false
+  
+  if(timer === false){
+  greeting.hide();
+  } 
+  else {
+  greeting.show();
   }
-  //else{
-  //greeting.show()  
-  //}
-}
+
 
 function drawMessage(currentMessage) {
   fill(0);
@@ -82,14 +85,15 @@ function drawMessage(currentMessage) {
   fill(255);
   text(currentMessage, 570,440);
 }
-
+}
 function greet() {
   var name = input.value();
-  greeting.html('timer set '+ timer+'!');
+  greeting.html('timer set!');
   //grab time
   input.value('');
-  //start timer = true;
-}
+
+  if (startTimer === true){
+  
   for (var i=0; i<200; i++) {
     push();
     fill(random(255), 255, 255);
@@ -97,6 +101,8 @@ function greet() {
     rotate(random(2*PI));
     text(name, 0, 0);
     pop();
+}
+}
 }
 
 function chooseRandomWord(){
