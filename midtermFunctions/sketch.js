@@ -8,7 +8,7 @@ var randomMessage;
 var slider; 
 var startTimer = 0; 
 var input, button, greet; 
-var timer= 5000; 
+var timer= 5; 
 
 var topInterval = 30;
 
@@ -38,11 +38,12 @@ function draw() {
 
   frameRate(1);
   
-  if(timer === true){
+ /* if(timer === true){
   greeting.hide();
   counter++;
   console.log("counter;=" + counter);
   }
+  */
   
   if (counter >= interval && counter <= interval + 10){
   drawMessage(randomMessage);
@@ -54,12 +55,14 @@ function draw() {
   counter = 0;
   }
   
+  /*
   if(timer === false){
   greeting.hide();
   } 
   else {
   greeting.show();
   }
+  */
 
 
 function drawMessage(currentMessage) {
@@ -92,7 +95,7 @@ function greet() {
   //grab time
   input.value('');
 
-  if (startTimer === true){
+  if (timer === true){
   
   for (var i=0; i<200; i++) {
     push();
