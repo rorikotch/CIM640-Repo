@@ -8,17 +8,15 @@ var randomMessage;
 var slider; 
 var startTimer = 0; 
 var input, button, greet; 
-var timer= 5; 
+var timer= 1; 
 
 var topInterval = 30;
-
 
 
 function setup() {
   createCanvas(2000, 2000);
   noStroke();
   randomMessage = chooseRandomWord();
-  
   
   input = createInput();
   input.position(510, 470);
@@ -38,31 +36,29 @@ function draw() {
 
   frameRate(1);
   
- /* if(timer === true){
-  greeting.hide();
+ if(timer === true){
+  greeting.show();
   counter++;
   console.log("counter;=" + counter);
   }
-  */
   
   if (counter >= interval && counter <= interval + 10){
   drawMessage(randomMessage);
   }
 
-  if (counter == interval + 11){
+  if (counter === interval + 11){
   randomMessage = chooseRandomWord();
   console.log(randomMessage);
   counter = 0;
   }
   
-  /*
   if(timer === false){
   greeting.hide();
   } 
   else {
   greeting.show();
   }
-  */
+
 
 
 function drawMessage(currentMessage) {
