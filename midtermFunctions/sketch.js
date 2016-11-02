@@ -8,7 +8,7 @@ var randomMessage;
 var slider; 
 var startTimer = 0; 
 var input, button, greet; 
-var timer= 1; 
+var timer= 1000; 
 
 var topInterval = 30;
 
@@ -51,6 +51,7 @@ function draw() {
   counter = 0;
   }
 }
+
   if (timer === false){
   greeting.hide();
   } 
