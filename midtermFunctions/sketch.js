@@ -34,25 +34,24 @@ function setup() {
 function draw() {
   background(255);
 
-  frameRate(1);
-  
- if(timer === true){
+  if(timer === true){
   greeting.show();
   counter++;
   console.log("counter;=" + counter);
-  }
+  
+  frameRate(1);
   
   if (counter >= interval && counter <= interval + 10){
   drawMessage(randomMessage);
   }
-
+  
   if (counter === interval + 11){
   randomMessage = chooseRandomWord();
   console.log(randomMessage);
   counter = 0;
   }
-  
-  if(timer === false){
+}
+  if (timer === false){
   greeting.hide();
   } 
   else {
