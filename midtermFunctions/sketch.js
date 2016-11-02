@@ -1,14 +1,16 @@
 var prevMillis = 0;
-var interval = 10;
+var interval = 0;
 var reset = 200;
 var counter = 0;
 var words = ["Take a break", "Eye know you can do it", "Take your vision to the next level", "Go get a coffee", "See what your co-workers are doing"];
 var word;
 var randomMessage;
-var slider; 
-var startTimer = 0; 
-var input, button, greet; 
-var timer= 1000; 
+var slider;
+var startTimer = 0;
+var input, button, greet;
+var timer = 1000;
+
+var startTimer = false;
 
 var topInterval = 30;
 
@@ -17,49 +19,51 @@ function setup() {
   createCanvas(2000, 2000);
   noStroke();
   randomMessage = chooseRandomWord();
-  
+
   input = createInput();
   input.position(510, 470);
-  
+
   button = createButton('submit');
   button.position(640, 470);
   button.mousePressed(greet);
-  
+
   greeting = createElement('h4', 'enter time interval');
   greeting.position(510, 430);
-  textAlign(CENTER); 
+  textAlign(CENTER);
   fill(255);
 }
 
 function draw() {
   background(255);
-
-  if(timer === true){
-  greeting.show();
-  counter++;
-  console.log("counter;=" + counter);
-  
   frameRate(1);
-  
-  if (counter >= interval && counter <= interval + 10){
-  drawMessage(randomMessage);
+
+  if (startTimer == true) {
+        console.log(interval);
+
+    greeting.hide();
+    input.hide();
+    button.hide();
+
+    counter++;
+    console.log("counter;=" + counter);
+
+
+    if (counter >= interval && counter <= interval + 10) {
+      drawMessage(randomMessage);
+    }
+
+    if (counter > interval + 11) {
+      startTimer = false;
+    }
+    
+  }else{
+    console.log(interval);
+    greeting.show();
+    input.show();
+    button.show();
   }
-  
-  if (counter === interval + 11){
-  randomMessage = chooseRandomWord();
-  console.log(randomMessage);
-  counter = 0;
-  }
+
 }
-
-  if (timer === false){
-  greeting.hide();
-  } 
-  else {
-  greeting.show();
-  }
-
-
 
 function drawMessage(currentMessage) {
   fill(0);
@@ -80,31 +84,37 @@ function drawMessage(currentMessage) {
   //mouth 
   fill(0);
   ellipse(949, 470, 20, 20);
-  
+
   fill(255);
-  text(currentMessage, 570,440);
+  text(currentMessage, 570, 440);
 }
-}
+
 function greet() {
-  var name = input.value();
+  interval = int(input.value());
   greeting.html('timer set!');
   //grab time
   input.value('');
+  startTimer = true;
+  counter = 0;
+  randomMessage = chooseRandomWord();
 
-  if (timer === true){
   
-  for (var i=0; i<200; i++) {
-    push();
-    fill(random(255), 255, 255);
-    translate(random(width), random(height));
-    rotate(random(2*PI));
-    text(name, 0, 0);
-    pop();
-}
-}
+  
+
+  // if (timer === true) {
+
+  //   for (var i = 0; i < 200; i++) {
+  //     push();
+  //     fill(random(255), 255, 255);
+  //     translate(random(width), random(height));
+  //     rotate(random(2 * PI));
+  //     text(name, 0, 0);
+  //     pop();
+  //   }
+  // }
 }
 
-function chooseRandomWord(){
+function chooseRandomWord() {
   var randomWord = random(words);
-  return(randomWord);
+  return (randomWord);
 }
