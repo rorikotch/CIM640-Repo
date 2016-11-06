@@ -23,9 +23,4 @@ function draw() {
   frameRate(1);
   }
 
- /* else {
-  (mousePressed == false);
-  background(255); 
-  } 
-} */
 
