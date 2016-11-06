@@ -1,5 +1,5 @@
 var gif;
-mousePressed = true; 
+
 
 function preload() {
   img = loadImage("mygif-one.gif");
@@ -9,22 +9,23 @@ function preload() {
 
 function setup() {
   createCanvas(600,600);
-  image(gif, 100, 100);
+  //image(gif, 100, 100);
 }
 
 function draw() {
   //background(0);
-  
-  if (mousePressed === true) {
+
   console.log('working');
-  gif = loadImage('mygif-one.gif');
-  gif= loadImage('mygif-two.gif');
-  gif = loadImage('mygif-three.gif');
+  gif = loadImage('image-one.gif');
+  gif= loadImage('image-two.gif');
+  gif = loadImage('image-three.gif');
+  //gif.play ('image-one.gif');
+  frameRate(1);
   }
 
-  else {
-  (mousePressed === false);
+ /* else {
+  (mousePressed == false);
   background(255); 
-  }
-}
+  } 
+} */
 
