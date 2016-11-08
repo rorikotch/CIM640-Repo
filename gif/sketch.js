@@ -1,24 +1,25 @@
 var gif;
 var gif1;
 var gif2;
+var loadGif; 
 
 
 function preload() {
-  gif = loadImage("images/image-one.gif");
-  gif1 = loadImage("images/image-two.gif");
-  gif2 = loadImage("images/image-three.gif");
+  gif = loadGif("images/image-one.gif");
+  gif1 = loadGif("images/image-two.gif");
+  gif2 = loadGif("images/image-three.gif");
 }
 
 function setup() {
   createCanvas(600,600);
-  image(gif, 0, 0);
+ 
 }
 
 function draw() {
   console.log('working');
-  gif.play(gif); 
-  gif.play(gif1);
-  gif.play(gif2);
+  image(gif, 0, 0);
+  image(gif1, 0, 0);
+  image (gif2, 0,0);
   }
 
 
