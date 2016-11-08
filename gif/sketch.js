@@ -26,8 +26,8 @@ function draw() {
   if (mouseIsPressed == true && showImage == true) {
   console.log('working');
   image(gif, 0, 0);
-  image(gif1, 0, 0);
-  image (gif2, 0,0);
+  image(gif1, 10, 200);
+  image (gif2, 300,0);
   } else {
     background(255);
   }
