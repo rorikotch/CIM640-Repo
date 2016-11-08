@@ -4,9 +4,9 @@ var gif2;
 
 
 function preload() {
-  gif = loadImage("mygif-one.gif");
-  gif1 = loadImage("mygif-two.gif");
-  gif2 = loadImage("mygif-three.gif");
+  gif = loadImage("images/image-one.gif");
+  gif1 = loadImage("images/image-two.gif");
+  gif2 = loadImage("images/image-three.gif");
 }
 
 function setup() {
@@ -15,14 +15,10 @@ function setup() {
 }
 
 function draw() {
-  background(red); 
   console.log('working');
-  //gif = loadImage('image-one.gif');
-  //gif= loadImage('image-two.gif');
-  //gif = loadImage('image-three.gif');
   gif.play(gif); 
-  //gif.play ('image-one.gif');
-  frameRate(1);
+  gif.play(gif1);
+  gif.play(gif2);
   }
 
 
