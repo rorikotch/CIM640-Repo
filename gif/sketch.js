@@ -46,7 +46,7 @@ function draw() {
     image(gif2, 300, 0);
     image(gif3, 600, 10);
     image(gif4, 500, 100);
-    image(gif5, 200, 500);
+    image(gif5, 200, 450);
     image(gif6, 500, 100);
 
 
