@@ -14,8 +14,7 @@ function setup() {
 }
 
 function draw() {
-  /*fill(0);
-  rect(10,10, 300, 75);*/
+
 } 
 
 function showResult()	{
@@ -23,5 +22,8 @@ function showResult()	{
 			background(192, 255, 192);
 			text(myRec.resultString, width/2, height/2);
 			console.log(myRec.resultString);
-		}
+		} /*else {
+		  background(192, 255, 192);
+		  text("Speak Louder")
+		} */
 	}
