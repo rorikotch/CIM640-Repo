@@ -3,7 +3,7 @@
 function setup() {
   	// graphics stuff:
 		createCanvas(800, 400);
-		background(255, 255, 255);
+		background(255);
 		fill(0, 0, 0, 255);
 		// instructions:
 		textSize(32);
